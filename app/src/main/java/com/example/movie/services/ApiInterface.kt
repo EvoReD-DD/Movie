@@ -8,11 +8,11 @@ import retrofit2.converter.gson.GsonConverterFactory
 import retrofit2.http.GET
 
 interface ApiInterface {
-    @GET("en/API/Top250Movies/k_3njs1y37") //"v3/b198e18f-39af-4692-a6c5-33bd7eedfbd4"
-    fun getMovies(): Call<List<Movie>>
+    @GET("en/API/Top250Movies/k_3njs1y37")
+    fun getMovies(): Call<Movie>
 
     companion object{
-        var BASE_URL = "https://imdb-api.com/"//https://run.mocky.io/"
+        var BASE_URL = "https://imdb-api.com/"
 
         fun create() : ApiInterface {
             val retrofit = Retrofit.Builder()
